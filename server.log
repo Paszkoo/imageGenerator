@@ -1,0 +1,509 @@
+2024-12-29 01:52:19,978 - INFO - Initializing Llama model...
+2024-12-29 01:52:22,252 - INFO - Llama model initialized successfully
+2024-12-29 01:52:22,253 - INFO - Starting Flask server...
+2024-12-29 01:52:22,260 - WARNING -  * Debugger is active!
+2024-12-29 01:52:22,263 - INFO -  * Debugger PIN: 316-601-601
+2024-12-29 01:52:29,140 - INFO - Headers: Content-Type: application/json
+User-Agent: PostmanRuntime/7.43.0
+Accept: */*
+Postman-Token: d70fca68-a271-475b-9a31-b2ab50c4a402
+Host: localhost:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 112
+
+
+2024-12-29 01:52:29,140 - INFO - Body: b'{\r\n    "categories": ["lake view","cyberpunk city","food on plate","image for background","real bird photos"]\r\n}'
+2024-12-29 01:52:29,141 - INFO - Received new request - ID: 20241229015229141035
+2024-12-29 01:52:29,141 - INFO - Request 20241229015229141035 - Received data: {'categories': ['lake view', 'cyberpunk city', 'food on plate', 'image for background', 'real bird photos']}
+2024-12-29 01:52:29,141 - INFO - Request 20241229015229141035 - Categories to process: ['lake view', 'cyberpunk city', 'food on plate', 'image for background', 'real bird photos']
+2024-12-29 01:52:29,141 - INFO - Created prompt: Generate 5 prompts for text-image generator. 5 categories: lake view, cyberpunk city, food on plate, image for background, real bird photos
+    Give me Json like: {Lake view: [prompt1, prompt2, prompt3, ...]}
+2024-12-29 01:52:29,141 - INFO - Request 20241229015229141035 - Starting Llama generation
+2024-12-29 01:56:52,563 - INFO - Request 20241229015229141035 - Llama generation completed in 263.42 seconds
+2024-12-29 01:56:52,563 - INFO - Starting JSON output cleaning...
+2024-12-29 01:56:52,564 - WARNING - Initial JSON parsing failed: Extra data: line 38 column 5 (char 2456). Attempting to clean the string...
+2024-12-29 01:56:52,564 - ERROR - Error processing JSON: Extra data: line 1 column 2420 (char 2419)
+Traceback (most recent call last):
+  File "C:\Users\jakub\Desktop\IN-PROGRES\imageGenerator\Llama\app\main.py", line 60, in clean_json_output
+    data = json.loads(json_str)
+  File "C:\ITstuff\Python\Python310\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\ITstuff\Python\Python310\lib\json\decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 38 column 5 (char 2456)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jakub\Desktop\IN-PROGRES\imageGenerator\Llama\app\main.py", line 71, in clean_json_output
+    data = json.loads(json_str)
+  File "C:\ITstuff\Python\Python310\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\ITstuff\Python\Python310\lib\json\decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 1 column 2420 (char 2419)
+2024-12-29 01:56:52,577 - INFO -  * Detected change in 'C:\\ITstuff\\Python\\Python310\\Lib\\json\\__init__.py', reloading
+2024-12-29 01:56:52,585 - INFO - Request 20241229015229141035 - Processing completed successfully
+2024-12-29 01:56:52,585 - INFO -  * Detected change in 'C:\\ITstuff\\Python\\Python310\\Lib\\json\\decoder.py', reloading
+2024-12-29 01:56:52,585 - INFO - Response status: 200 OK
+2024-12-29 01:56:52,585 - INFO - Response data: b'{\n  "error": "Failed to process the output: Extra data: line 1 column 2420 (char 2419)"\n}\n'
+2024-12-29 01:56:52,585 - INFO - 127.0.0.1 - - [29/Dec/2024 01:56:52] "POST /generate_prompts HTTP/1.1" 200 -
+2024-12-29 01:56:54,078 - INFO - Initializing Llama model...
+2024-12-29 01:56:56,375 - INFO - Llama model initialized successfully
+2024-12-29 01:56:56,376 - INFO - Starting Flask server...
+2024-12-29 01:56:56,385 - WARNING -  * Debugger is active!
+2024-12-29 01:56:56,389 - INFO -  * Debugger PIN: 316-601-601
+2024-12-29 01:59:58,713 - INFO -  * Detected change in 'C:\\Users\\jakub\\Desktop\\IN-PROGRES\\imageGenerator\\Llama\\app\\main.py', reloading
+2024-12-29 01:59:58,714 - INFO -  * Detected change in 'C:\\Users\\jakub\\Desktop\\IN-PROGRES\\imageGenerator\\Llama\\app\\main.py', reloading
+2024-12-29 01:59:59,621 - INFO - Initializing Llama model...
+2024-12-29 02:00:01,872 - INFO - Llama model initialized successfully
+2024-12-29 02:00:01,872 - INFO - Starting Flask server...
+2024-12-29 02:00:01,879 - WARNING -  * Debugger is active!
+2024-12-29 02:00:01,882 - INFO -  * Debugger PIN: 316-601-601
+2024-12-29 02:00:08,569 - INFO - Headers: Content-Type: application/json
+User-Agent: PostmanRuntime/7.43.0
+Accept: */*
+Postman-Token: 227935e0-8296-4ac9-a8e0-9a249af846cb
+Host: localhost:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 112
+
+
+2024-12-29 02:00:08,570 - INFO - Body: b'{\r\n    "categories": ["lake view","cyberpunk city","food on plate","image for background","real bird photos"]\r\n}'
+2024-12-29 02:00:08,570 - INFO - Received new request - ID: 20241229020008570293
+2024-12-29 02:00:08,570 - INFO - Request 20241229020008570293 - Received data: {'categories': ['lake view', 'cyberpunk city', 'food on plate', 'image for background', 'real bird photos']}
+2024-12-29 02:00:08,570 - INFO - Request 20241229020008570293 - Categories to process: ['lake view', 'cyberpunk city', 'food on plate', 'image for background', 'real bird photos']
+2024-12-29 02:00:08,571 - INFO - Created prompt: Generate 5 prompts for text-image generator. 5 categories: lake view, cyberpunk city, food on plate, image for background, real bird photos
+    Give me Json like: {Lake view: [prompt1, prompt2, prompt3, ...]}
+    Important: Keep the output concise and in valid JSON format.
+    Do not add any explanations or additional text.
+    
+2024-12-29 02:00:08,571 - INFO - Request 20241229020008570293 - Starting Llama generation
+2024-12-29 02:00:38,582 - ERROR - Function generate_with_llama timed out after 30 seconds
+2024-12-29 02:00:38,582 - ERROR - Request 20241229020008570293 - Model generation timed out
+2024-12-29 02:00:38,582 - INFO - Response status: 503 SERVICE UNAVAILABLE
+2024-12-29 02:00:38,582 - INFO - Response data: b'{\n  "error": "Model generation timed out"\n}\n'
+2024-12-29 02:00:38,583 - INFO - 127.0.0.1 - - [29/Dec/2024 02:00:38] "[35m[1mPOST /generate_prompts HTTP/1.1[0m" 503 -
+2024-12-29 02:01:44,360 - INFO - Headers: Content-Type: application/json
+User-Agent: PostmanRuntime/7.43.0
+Accept: */*
+Postman-Token: 4ca65648-6ab1-4de4-a0bd-667abe911a1d
+Host: localhost:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 112
+
+
+2024-12-29 02:01:44,361 - INFO - Body: b'{\r\n    "categories": ["lake view","cyberpunk city","food on plate","image for background","real bird photos"]\r\n}'
+2024-12-29 02:01:44,361 - INFO - Received new request - ID: 20241229020144361204
+2024-12-29 02:01:44,361 - INFO - Request 20241229020144361204 - Received data: {'categories': ['lake view', 'cyberpunk city', 'food on plate', 'image for background', 'real bird photos']}
+2024-12-29 02:01:44,361 - INFO - Request 20241229020144361204 - Categories to process: ['lake view', 'cyberpunk city', 'food on plate', 'image for background', 'real bird photos']
+2024-12-29 02:01:44,361 - INFO - Created prompt: Generate 5 prompts for text-image generator. 5 categories: lake view, cyberpunk city, food on plate, image for background, real bird photos
+    Give me Json like: {Lake view: [prompt1, prompt2, prompt3, ...]}
+    Important: Keep the output concise and in valid JSON format.
+    Do not add any explanations or additional text.
+    
+2024-12-29 02:01:44,361 - INFO - Request 20241229020144361204 - Starting Llama generation
+2024-12-29 02:02:14,370 - ERROR - Function generate_with_llama timed out after 30 seconds
+2024-12-29 02:02:14,370 - ERROR - Request 20241229020144361204 - Model generation timed out
+2024-12-29 02:02:14,370 - INFO - Response status: 503 SERVICE UNAVAILABLE
+2024-12-29 02:02:14,370 - INFO - Response data: b'{\n  "error": "Model generation timed out"\n}\n'
+2024-12-29 02:02:14,371 - INFO - 127.0.0.1 - - [29/Dec/2024 02:02:14] "[35m[1mPOST /generate_prompts HTTP/1.1[0m" 503 -
+2024-12-29 02:14:49,146 - INFO -  * Detected change in 'C:\\Users\\jakub\\Desktop\\IN-PROGRES\\imageGenerator\\Llama\\app\\main.py', reloading
+2024-12-29 02:14:49,146 - INFO -  * Detected change in 'C:\\Users\\jakub\\Desktop\\IN-PROGRES\\imageGenerator\\Llama\\app\\main.py', reloading
+2024-12-29 02:14:50,307 - INFO - Initializing Llama model...
+2024-12-29 02:14:50,967 - INFO - Llama model initialized successfully
+2024-12-29 02:14:50,968 - INFO - Starting Flask server...
+2024-12-29 02:14:50,976 - WARNING -  * Debugger is active!
+2024-12-29 02:14:51,214 - INFO -  * Debugger PIN: 316-601-601
+2024-12-29 02:14:56,328 - INFO - Headers: Content-Type: application/json
+User-Agent: PostmanRuntime/7.43.0
+Accept: */*
+Postman-Token: 4e70294c-a299-49fe-881a-c6897398747c
+Host: localhost:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 112
+
+
+2024-12-29 02:14:56,329 - INFO - Body: b'{\r\n    "categories": ["lake view","cyberpunk city","food on plate","image for background","real bird photos"]\r\n}'
+2024-12-29 02:14:56,329 - INFO - Received new request - ID: 20241229021456329014
+2024-12-29 02:14:56,329 - INFO - Request 20241229021456329014 - Received data: {'categories': ['lake view', 'cyberpunk city', 'food on plate', 'image for background', 'real bird photos']}
+2024-12-29 02:14:56,329 - INFO - Request 20241229021456329014 - Categories to process: ['lake view', 'cyberpunk city', 'food on plate', 'image for background', 'real bird photos']
+2024-12-29 02:14:56,329 - INFO - Created prompt: Generate 5 prompts for text-image generator. 5 categories: lake view, cyberpunk city, food on plate, image for background, real bird photos
+    Give me Json like: {Lake view: [prompt1, prompt2, prompt3, ...]}
+    Important: Keep the output concise and in valid JSON format.
+    Do not add any explanations or additional text.
+    
+2024-12-29 02:14:56,330 - INFO - Request 20241229021456329014 - Starting Llama generation
+2024-12-29 02:15:26,333 - ERROR - Function generate_with_llama timed out after 30 seconds
+2024-12-29 02:15:26,333 - ERROR - Request 20241229021456329014 - Model generation timed out
+2024-12-29 02:15:26,333 - INFO - Response status: 503 SERVICE UNAVAILABLE
+2024-12-29 02:15:26,333 - INFO - Response data: b'{\n  "error": "Model generation timed out"\n}\n'
+2024-12-29 02:15:26,333 - INFO - 127.0.0.1 - - [29/Dec/2024 02:15:26] "[35m[1mPOST /generate_prompts HTTP/1.1[0m" 503 -
+2024-12-29 02:18:41,615 - INFO -  * Detected change in 'C:\\Users\\jakub\\Desktop\\IN-PROGRES\\imageGenerator\\Llama\\app\\main.py', reloading
+2024-12-29 02:18:41,616 - INFO -  * Detected change in 'C:\\Users\\jakub\\Desktop\\IN-PROGRES\\imageGenerator\\Llama\\app\\main.py', reloading
+2024-12-29 02:18:43,277 - INFO - Initializing Phi-3 model...
+2024-12-29 02:18:43,277 - ERROR - Failed to initialize Phi-3 model: Model path does not exist: Phi-3-mini-4k-instruct-fp16.gguf
+2024-12-29 02:19:52,782 - INFO - Initializing Phi-3 model...
+2024-12-29 02:19:53,560 - INFO - Phi-3 model initialized successfully
+2024-12-29 02:19:53,560 - INFO - Starting Flask server...
+2024-12-29 02:19:53,573 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-29 02:19:53,574 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-29 02:19:53,579 - INFO -  * Restarting with watchdog (windowsapi)
+2024-12-29 02:19:53,793 - INFO - Initializing Phi-3 model...
+2024-12-29 02:19:54,549 - INFO - Phi-3 model initialized successfully
+2024-12-29 02:19:54,549 - INFO - Starting Flask server...
+2024-12-29 02:19:54,556 - WARNING -  * Debugger is active!
+2024-12-29 02:19:54,559 - INFO -  * Debugger PIN: 316-601-601
+2024-12-29 02:20:00,859 - INFO - Headers: Content-Type: application/json
+User-Agent: PostmanRuntime/7.43.0
+Accept: */*
+Postman-Token: e8881ee5-e4c9-45a8-8d7b-05b757ca40cb
+Host: localhost:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 112
+
+
+2024-12-29 02:20:00,860 - INFO - Body: b'{\r\n    "categories": ["lake view","cyberpunk city","food on plate","image for background","real bird photos"]\r\n}'
+2024-12-29 02:20:00,860 - INFO - Received new request - ID: 20241229022000860135
+2024-12-29 02:20:00,860 - INFO - Request 20241229022000860135 - Received data: {'categories': ['lake view', 'cyberpunk city', 'food on plate', 'image for background', 'real bird photos']}
+2024-12-29 02:20:00,860 - INFO - Request 20241229022000860135 - Categories to process: ['lake view', 'cyberpunk city', 'food on plate', 'image for background', 'real bird photos']
+2024-12-29 02:20:00,861 - INFO - Created prompt: Instruct: Generate 5 creative and diverse prompts for each of the following image generation categories: lake view, cyberpunk city, food on plate, image for background, real bird photos
+Return the response in valid JSON format like this:
+{
+    "category_name": [
+        "detailed prompt 1",
+        "detailed prompt 2",
+        "detailed prompt 3",
+        "detailed prompt 4",
+        "detailed prompt 5"
+    ]
+}
+
+Keep the output concise and ensure it's valid JSON. Do not include any additional text or explanations.
+
+Response: 
+2024-12-29 02:20:00,861 - INFO - Request 20241229022000860135 - Starting Phi-3 generation
+2024-12-29 02:20:30,865 - ERROR - Function generate_with_phi3 timed out after 30 seconds
+2024-12-29 02:20:30,865 - ERROR - Request 20241229022000860135 - Model generation timed out
+2024-12-29 02:20:30,866 - INFO - Response status: 503 SERVICE UNAVAILABLE
+2024-12-29 02:20:30,866 - INFO - Response data: b'{\n  "error": "Model generation timed out"\n}\n'
+2024-12-29 02:20:30,866 - INFO - 127.0.0.1 - - [29/Dec/2024 02:20:30] "[35m[1mPOST /generate_prompts HTTP/1.1[0m" 503 -
+2024-12-29 02:24:31,886 - INFO -  * Detected change in 'C:\\Users\\jakub\\Desktop\\IN-PROGRES\\imageGenerator\\Llama\\app\\main.py', reloading
+2024-12-29 02:24:31,886 - INFO -  * Detected change in 'C:\\Users\\jakub\\Desktop\\IN-PROGRES\\imageGenerator\\Llama\\app\\main.py', reloading
+2024-12-29 02:24:33,150 - INFO -  * Restarting with watchdog (windowsapi)
+2024-12-29 02:24:33,387 - INFO - Initializing Phi-3 model...
+2024-12-29 02:24:34,153 - INFO - Phi-3 model initialized successfully
+2024-12-29 02:24:34,153 - INFO - Starting Flask server...
+2024-12-29 02:24:34,160 - WARNING -  * Debugger is active!
+2024-12-29 02:24:34,164 - INFO -  * Debugger PIN: 316-601-601
+2024-12-29 02:24:40,363 - INFO - Headers: Content-Type: application/json
+User-Agent: PostmanRuntime/7.43.0
+Accept: */*
+Postman-Token: e3f88a74-593c-40cc-8d26-3dcc71805b36
+Host: localhost:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 112
+
+
+2024-12-29 02:24:40,363 - INFO - Body: b'{\r\n    "categories": ["lake view","cyberpunk city","food on plate","image for background","real bird photos"]\r\n}'
+2024-12-29 02:24:40,364 - INFO - Received new request - ID: 20241229022440364218
+2024-12-29 02:24:40,364 - INFO - Request 20241229022440364218 - Received data: {'categories': ['lake view', 'cyberpunk city', 'food on plate', 'image for background', 'real bird photos']}
+2024-12-29 02:24:40,364 - INFO - Request 20241229022440364218 - Categories to process: ['lake view', 'cyberpunk city', 'food on plate', 'image for background', 'real bird photos']
+2024-12-29 02:24:40,364 - INFO - Created prompt: Instruct: Generate 5 creative and diverse prompts for each of the following image generation categories: lake view, cyberpunk city, food on plate, image for background, real bird photos
+Return the response in valid JSON format like this:
+{
+    "category_name": [
+        "detailed prompt 1",
+        "detailed prompt 2",
+        "detailed prompt 3",
+        "detailed prompt 4",
+        "detailed prompt 5"
+    ]
+}
+
+Keep the output concise and ensure it's valid JSON. Do not include any additional text or explanations.
+
+Response: 
+2024-12-29 02:24:40,364 - INFO - Request 20241229022440364218 - Starting Phi-3 generation
+2024-12-29 02:26:40,374 - ERROR - Function generate_with_phi3 timed out after 120 seconds
+2024-12-29 02:26:40,374 - ERROR - Request 20241229022440364218 - Model generation timed out
+2024-12-29 02:26:40,374 - INFO - Response status: 503 SERVICE UNAVAILABLE
+2024-12-29 02:26:40,374 - INFO - Response data: b'{\n  "error": "Model generation timed out"\n}\n'
+2024-12-29 02:26:40,375 - INFO - 127.0.0.1 - - [29/Dec/2024 02:26:40] "[35m[1mPOST /generate_prompts HTTP/1.1[0m" 503 -
+2024-12-29 02:29:49,399 - INFO - Starting model initialization...
+2024-12-29 02:29:49,400 - ERROR - Failed to initialize model with GPU: Model path does not exist: C:\Users\jakub\Desktop\IN-PROGRES\imageGenerator\phi3\MODELS\phi-3.Q4_K_M.gguf
+2024-12-29 02:29:49,400 - WARNING - Attempting CPU initialization...
+2024-12-29 02:29:49,400 - ERROR - Failed to initialize model on CPU: Model path does not exist: C:\Users\jakub\Desktop\IN-PROGRES\imageGenerator\phi3\MODELS\phi-3.Q4_K_M.gguf
+2024-12-29 02:29:49,400 - ERROR - Critical error during model initialization: Model path does not exist: C:\Users\jakub\Desktop\IN-PROGRES\imageGenerator\phi3\MODELS\phi-3.Q4_K_M.gguf
+2024-12-29 02:31:28,791 - INFO - Starting model initialization...
+2024-12-29 02:31:28,791 - ERROR - Failed to initialize model with GPU: Model path does not exist: C:\Users\jakub\Desktop\IN-PROGRES\imageGenerator\Llama\MODELS\Llama\MODELS\Phi-3-mini-4k-instruct-fp16.gguf
+2024-12-29 02:31:28,791 - WARNING - Attempting CPU initialization...
+2024-12-29 02:31:31,066 - INFO - Model initialized successfully on CPU
+2024-12-29 02:31:31,067 - INFO - Starting Flask server...
+2024-12-29 02:31:31,083 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-29 02:31:31,083 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-29 02:31:31,090 - INFO -  * Restarting with watchdog (windowsapi)
+2024-12-29 02:31:31,314 - INFO - Starting model initialization...
+2024-12-29 02:31:31,315 - ERROR - Failed to initialize model with GPU: Model path does not exist: C:\Users\jakub\Desktop\IN-PROGRES\imageGenerator\Llama\MODELS\Llama\MODELS\Phi-3-mini-4k-instruct-fp16.gguf
+2024-12-29 02:31:31,315 - WARNING - Attempting CPU initialization...
+2024-12-29 02:31:33,604 - INFO - Model initialized successfully on CPU
+2024-12-29 02:31:33,604 - INFO - Starting Flask server...
+2024-12-29 02:31:33,612 - WARNING -  * Debugger is active!
+2024-12-29 02:31:33,615 - INFO -  * Debugger PIN: 316-601-601
+2024-12-29 02:33:05,627 - INFO -  * Detected change in 'C:\\Users\\jakub\\Desktop\\IN-PROGRES\\imageGenerator\\Llama\\app\\main.py', reloading
+2024-12-29 02:33:05,627 - INFO -  * Detected change in 'C:\\Users\\jakub\\Desktop\\IN-PROGRES\\imageGenerator\\Llama\\app\\main.py', reloading
+2024-12-29 02:33:06,265 - INFO -  * Restarting with watchdog (windowsapi)
+2024-12-29 02:33:06,498 - INFO - Starting model initialization...
+2024-12-29 02:33:07,353 - INFO - Model initialized successfully with GPU support
+2024-12-29 02:33:07,354 - INFO - Starting Flask server...
+2024-12-29 02:33:07,360 - WARNING -  * Debugger is active!
+2024-12-29 02:33:07,364 - INFO -  * Debugger PIN: 316-601-601
+2024-12-29 02:33:09,298 - INFO - Starting model initialization...
+2024-12-29 02:33:10,078 - INFO - Model initialized successfully with GPU support
+2024-12-29 02:33:10,079 - INFO - Starting Flask server...
+2024-12-29 02:33:10,093 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-29 02:33:10,094 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-29 02:33:10,100 - INFO -  * Restarting with watchdog (windowsapi)
+2024-12-29 02:33:10,313 - INFO - Starting model initialization...
+2024-12-29 02:33:11,093 - INFO - Model initialized successfully with GPU support
+2024-12-29 02:33:11,094 - INFO - Starting Flask server...
+2024-12-29 02:33:11,102 - WARNING -  * Debugger is active!
+2024-12-29 02:33:11,105 - INFO -  * Debugger PIN: 316-601-601
+2024-12-29 02:33:23,137 - INFO - Headers: Content-Type: application/json
+User-Agent: PostmanRuntime/7.43.0
+Accept: */*
+Postman-Token: c6cf0272-6435-4a6b-9bac-2c08143f0d51
+Host: localhost:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 112
+
+
+2024-12-29 02:33:23,138 - INFO - Body: b'{\r\n    "categories": ["lake view","cyberpunk city","food on plate","image for background","real bird photos"]\r\n}'
+2024-12-29 02:33:23,138 - INFO - Received new request - ID: 20241229023323138711
+2024-12-29 02:33:23,138 - INFO - Request 20241229023323138711 - Received data: {'categories': ['lake view', 'cyberpunk city', 'food on plate', 'image for background', 'real bird photos']}
+2024-12-29 02:33:23,139 - INFO - Request 20241229023323138711 - Categories to process: ['lake view', 'cyberpunk city', 'food on plate', 'image for background', 'real bird photos']
+2024-12-29 02:33:23,139 - INFO - Created prompt: Instruct: Generate 5 creative and diverse prompts for each of the following image generation categories: lake view, cyberpunk city, food on plate, image for background, real bird photos
+Return the response in valid JSON format like this:
+{
+    "category_name": [
+        "detailed prompt 1",
+        "detailed prompt 2",
+        "detailed prompt 3",
+        "detailed prompt 4",
+        "detailed prompt 5"
+    ]
+}
+
+Keep the output concise and ensure it's valid JSON. Do not include any additional text or explanations.
+
+Response: 
+2024-12-29 02:33:23,139 - INFO - Request 20241229023323138711 - Starting Phi-3 generation
+2024-12-29 02:35:23,151 - ERROR - Function generate_with_phi3 timed out after 120 seconds
+2024-12-29 02:35:23,151 - ERROR - Request 20241229023323138711 - Model generation timed out
+2024-12-29 02:35:23,151 - INFO - Response status: 503 SERVICE UNAVAILABLE
+2024-12-29 02:35:23,151 - INFO - Response data: b'{\n  "error": "Model generation timed out"\n}\n'
+2024-12-29 02:35:23,152 - INFO - 127.0.0.1 - - [29/Dec/2024 02:35:23] "[35m[1mPOST /generate_prompts HTTP/1.1[0m" 503 -
+2024-12-29 02:35:30,597 - INFO - Generation completed in 127.46 seconds
+2024-12-29 02:35:53,292 - INFO -  * Detected change in 'C:\\Users\\jakub\\Desktop\\IN-PROGRES\\imageGenerator\\Llama\\app\\main.py', reloading
+2024-12-29 02:35:53,292 - INFO -  * Detected change in 'C:\\Users\\jakub\\Desktop\\IN-PROGRES\\imageGenerator\\Llama\\app\\main.py', reloading
+2024-12-29 02:35:54,023 - INFO -  * Restarting with watchdog (windowsapi)
+2024-12-29 02:35:54,255 - INFO - Starting model initialization...
+2024-12-29 02:35:55,029 - INFO - Model initialized successfully with GPU support
+2024-12-29 02:35:55,030 - INFO - Starting Flask server...
+2024-12-29 02:35:55,036 - WARNING -  * Debugger is active!
+2024-12-29 02:35:55,041 - INFO -  * Debugger PIN: 316-601-601
+2024-12-29 02:35:59,100 - INFO - Headers: Content-Type: application/json
+User-Agent: PostmanRuntime/7.43.0
+Accept: */*
+Postman-Token: 70c9c00a-690f-4bd6-9a1e-a59354185638
+Host: localhost:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 112
+
+
+2024-12-29 02:35:59,102 - INFO - Body: b'{\r\n    "categories": ["lake view","cyberpunk city","food on plate","image for background","real bird photos"]\r\n}'
+2024-12-29 02:35:59,102 - INFO - Received new request - ID: 20241229023559102005
+2024-12-29 02:35:59,102 - INFO - Request 20241229023559102005 - Received data: {'categories': ['lake view', 'cyberpunk city', 'food on plate', 'image for background', 'real bird photos']}
+2024-12-29 02:35:59,102 - INFO - Request 20241229023559102005 - Categories to process: ['lake view', 'cyberpunk city', 'food on plate', 'image for background', 'real bird photos']
+2024-12-29 02:35:59,102 - INFO - Created prompt: Instruct: Generate 5 creative and diverse prompts for each of the following image generation categories: lake view, cyberpunk city, food on plate, image for background, real bird photos
+Return the response in valid JSON format like this:
+{
+    "category_name": [
+        "detailed prompt 1",
+        "detailed prompt 2",
+        "detailed prompt 3",
+        "detailed prompt 4",
+        "detailed prompt 5"
+    ]
+}
+
+Keep the output concise and ensure it's valid JSON. Do not include any additional text or explanations.
+
+Response: 
+2024-12-29 02:35:59,103 - INFO - Request 20241229023559102005 - Starting Phi-3 generation
+2024-12-29 02:37:58,749 - INFO - Generation completed in 119.65 seconds
+2024-12-29 02:37:58,750 - INFO - Request 20241229023559102005 - Phi-3 generation completed in 119.65 seconds
+2024-12-29 02:37:58,750 - INFO - Starting JSON output cleaning...
+2024-12-29 02:37:58,750 - INFO - Successfully parsed initial JSON
+2024-12-29 02:37:58,750 - INFO - Adjusted prompts for lake view: 5 prompts
+2024-12-29 02:37:58,750 - INFO - Adjusted prompts for cyberpunk city: 5 prompts
+2024-12-29 02:37:58,750 - INFO - Adjusted prompts for food on plate: 5 prompts
+2024-12-29 02:37:58,750 - INFO - Adjusted prompts for image for background: 5 prompts
+2024-12-29 02:37:58,751 - INFO - Adjusted prompts for real bird photos: 5 prompts
+2024-12-29 02:37:58,751 - INFO - JSON cleaning completed successfully
+2024-12-29 02:37:58,751 - INFO - Request 20241229023559102005 - Processing completed successfully
+2024-12-29 02:37:58,751 - INFO - Response status: 200 OK
+2024-12-29 02:37:58,751 - INFO - Response data: b'{\n  "cyberpunk city": [\n    "A sprawling cyberpunk metropolis at night, with towering skyscrapers adorned with neon lights and flying vehicles.",\n    "Downtown area of a futuristic cityscape featuring holographic billboards and bustling hover-traffic below.",\n    "A close-up shot of an advanced cybernetic arm glowing in the reflection of a rain-soaked street.",\n    "Neon-lit alleyways showcasing vibrant graffiti art amidst a backdrop of retro and high-tech architecture.",\n    "The city\'s central plaza during rush hour, with hovercars zipping by overhead and people in augmented reality gear."\n  ],\n  "food on plate": [\n    "A beautifully plated dish showcasing a colorful medley of fresh vegetables atop a bed of artisanal risotto.",\n    "An elegantly arranged dessert featuring layers of dark chocolate mousse, raspberry coulis, and gold leaf accents.",\n    "A rustic farm-to-table creation with grilled seasonal vegetables drizzled over creamy polenta topped with Parmesan shavings.",\n    "An avant-garde dish combining savory foie gras terrine with sweet fig compote and a touch of edible gold leaf for garnish.",\n    "A sushi masterpiece, featuring intricately rolled dragon rolls adorned with microgreens, sesame seeds, and wasabi."\n  ],\n  "image for background": [\n    "A star-filled night sky over a desert landscape, providing an otherworldly atmosphere for portrait photography.",\n    "An urban park scene in the early morning light, offering a peaceful and inviting backdrop for outdoor events.",\n    "A cozy living room with warm ambient lighting, featuring plush furniture and soft textures to inspire relaxation.",\n    "A vibrant botanical garden teeming with exotic flowers and lush greenery, perfect for nature-inspired photography or video shoots.",\n    "An artist\'s studio bathed in natural light, showcasing a colorful palette of paints on an easel next to completed canvases."\n  ],\n  "lake view": [\n    "A serene lake at sunrise with a silhouette of mountains in the background and a lone canoe gliding across.",\n    "A crystal-clear mountain lake reflecting vibrant autumn leaves, surrounded by dense evergreen forests.",\n    "An idyllic lakeside setting during twilight, featuring fireflies dancing around a wooden docked boat.",\n    "Winter\'s first frost covering the surface of a tranquil lake in a secluded mountain valley.",\n    "A summer evening at a picturesque lake where swans glide gracefully on the water and a family picnic is underway."\n  ],\n  "real bird photos": [\n    "A majestic bald eagle perched atop a lofty tree branch during golden hour with sunlight casting long shadows.",\n    "A close-up shot of a hummingbird\'s iridescent feathers in full flight, capturing the delicate balance and speed.",\n    "An intimate portrait of an African grey parrot preening its plumage while nestled inside a cozy birdcage.",\n    "A pair of ospreys soaring over a shimmering lake, their white undersides contrasted against the deep blue sky.",\n    "A vibrant tropical scene featuring colorful toucan in lush rainforest foliage and blooming flowers."\n  ]\n}\n'
+2024-12-29 02:37:58,752 - INFO - 127.0.0.1 - - [29/Dec/2024 02:37:58] "POST /generate_prompts HTTP/1.1" 200 -
+2024-12-29 02:39:27,243 - INFO -  * Detected change in 'C:\\Users\\jakub\\Desktop\\IN-PROGRES\\imageGenerator\\Llama\\app\\main.py', reloading
+2024-12-29 02:39:27,243 - INFO -  * Detected change in 'C:\\Users\\jakub\\Desktop\\IN-PROGRES\\imageGenerator\\Llama\\app\\main.py', reloading
+2024-12-29 02:39:28,157 - INFO -  * Restarting with watchdog (windowsapi)
+2024-12-29 02:39:28,410 - INFO - Starting model initialization...
+2024-12-29 02:39:29,192 - INFO - Model initialized successfully with GPU support
+2024-12-29 02:39:29,192 - INFO - Starting Flask server...
+2024-12-29 02:39:29,199 - WARNING -  * Debugger is active!
+2024-12-29 02:39:29,202 - INFO -  * Debugger PIN: 316-601-601
+2024-12-29 02:39:32,315 - INFO - Headers: Content-Type: application/json
+User-Agent: PostmanRuntime/7.43.0
+Accept: */*
+Postman-Token: 34c22c50-942d-4646-a0c3-0f2a737f5327
+Host: localhost:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 112
+
+
+2024-12-29 02:39:32,315 - INFO - Body: b'{\r\n    "categories": ["lake view","cyberpunk city","food on plate","image for background","real bird photos"]\r\n}'
+2024-12-29 02:39:32,317 - INFO - Received new request - ID: 20241229023932317019
+2024-12-29 02:39:32,317 - INFO - Request 20241229023932317019 - Received data: {'categories': ['lake view', 'cyberpunk city', 'food on plate', 'image for background', 'real bird photos']}
+2024-12-29 02:39:32,317 - INFO - Request 20241229023932317019 - Categories to process: ['lake view', 'cyberpunk city', 'food on plate', 'image for background', 'real bird photos']
+2024-12-29 02:39:32,317 - INFO - Created prompt: Instruct: Generate 5 creative and diverse prompts for each of the following image generation categories: lake view, cyberpunk city, food on plate, image for background, real bird photos
+Return the response in valid JSON format like this:
+{
+    "category_name": [
+        "detailed prompt 1",
+        "detailed prompt 2",
+        "detailed prompt 3",
+        "detailed prompt 4",
+        "detailed prompt 5"
+    ]
+}
+
+Keep the output concise and ensure it's valid JSON. Do not include any additional text or explanations.
+
+Response: 
+2024-12-29 02:39:32,317 - INFO - Request 20241229023932317019 - Starting Phi-3 generation
+2024-12-29 02:41:32,596 - INFO - Generation completed in 120.28 seconds
+2024-12-29 02:41:32,596 - INFO - Request 20241229023932317019 - Phi-3 generation completed in 120.28 seconds
+2024-12-29 02:41:32,596 - INFO - Starting JSON output cleaning...
+2024-12-29 02:41:32,596 - INFO - Successfully parsed initial JSON
+2024-12-29 02:41:32,596 - INFO - Adjusted prompts for lake view: 5 prompts
+2024-12-29 02:41:32,596 - INFO - Adjusted prompts for cyberpunk city: 5 prompts
+2024-12-29 02:41:32,597 - INFO - Adjusted prompts for food on plate: 5 prompts
+2024-12-29 02:41:32,597 - INFO - Adjusted prompts for image for background: 5 prompts
+2024-12-29 02:41:32,597 - INFO - Adjusted prompts for real bird photos: 5 prompts
+2024-12-29 02:41:32,597 - INFO - JSON cleaning completed successfully
+2024-12-29 02:41:32,597 - INFO - Request 20241229023932317019 - Processing completed successfully
+2024-12-29 02:41:32,597 - INFO - Response status: 200 OK
+2024-12-29 02:41:32,597 - INFO - Response data: b'{\n  "cyberpunk city": [\n    "A sprawling cyberpunk metropolis at night, with towering skyscrapers adorned with neon lights and flying vehicles.",\n    "Downtown area of a futuristic cityscape featuring holographic billboards and bustling hover-traffic below.",\n    "A close-up shot of an advanced cybernetic arm glowing in the reflection of a rain-soaked street.",\n    "Neon-lit alleyways showcasing vibrant graffiti art amidst a backdrop of retro and high-tech architecture.",\n    "The city\'s central plaza during rush hour, with hovercars zipping by overhead and people in augmented reality gear."\n  ],\n  "food on plate": [\n    "A beautifully plated dish showcasing a colorful medley of fresh vegetables atop a bed of artisanal risotto.",\n    "An elegantly arranged dessert featuring layers of dark chocolate mousse, raspberry coulis, and gold leaf accents.",\n    "A rustic farm-to-table creation with grilled seasonal vegetables drizzled over creamy polenta topped with Parmesan shavings.",\n    "An avant-garde dish combining savory foie gras terrine with sweet fig compote and a touch of edible gold leaf for garnish.",\n    "A sushi masterpiece, featuring intricately rolled dragon rolls adorned with microgreens, sesame seeds, and wasabi."\n  ],\n  "image for background": [\n    "A star-filled night sky over a desert landscape, providing an otherworldly atmosphere for portrait photography.",\n    "An urban park scene in the early morning light, offering a peaceful and inviting backdrop for outdoor events.",\n    "A cozy living room with warm ambient lighting, featuring plush furniture and soft textures to inspire relaxation.",\n    "A vibrant botanical garden teeming with exotic flowers and lush greenery, perfect for nature-inspired photography or video shoots.",\n    "An artist\'s studio bathed in natural light, showcasing a colorful palette of paints on an easel next to completed canvases."\n  ],\n  "lake view": [\n    "A serene lake at sunrise with a silhouette of mountains in the background and a lone canoe gliding across.",\n    "A crystal-clear mountain lake reflecting vibrant autumn leaves, surrounded by dense evergreen forests.",\n    "An idyllic lakeside setting during twilight, featuring fireflies dancing around a wooden docked boat.",\n    "Winter\'s first frost covering the surface of a tranquil lake in a secluded mountain valley.",\n    "A summer evening at a picturesque lake where swans glide gracefully on the water and a family picnic is underway."\n  ],\n  "real bird photos": [\n    "A majestic bald eagle perched atop a lofty tree branch during golden hour with sunlight casting long shadows.",\n    "A close-up shot of a hummingbird\'s iridescent feathers in full flight, capturing the delicate balance and speed.",\n    "An intimate portrait of an African grey parrot preening its plumage while nestled inside a cozy birdcage.",\n    "A pair of ospreys soaring over a shimmering lake, their white undersides contrasted against the deep blue sky.",\n    "A vibrant tropical scene featuring colorful toucan in lush rainforest foliage and blooming flowers."\n  ]\n}\n'
+2024-12-29 02:41:32,598 - INFO - 127.0.0.1 - - [29/Dec/2024 02:41:32] "POST /generate_prompts HTTP/1.1" 200 -
+2024-12-29 02:54:43,213 - INFO -  * Detected change in 'C:\\Users\\jakub\\Desktop\\IN-PROGRES\\imageGenerator\\Llama\\app\\main.py', reloading
+2024-12-29 02:54:43,214 - INFO -  * Detected change in 'C:\\Users\\jakub\\Desktop\\IN-PROGRES\\imageGenerator\\Llama\\app\\main.py', reloading
+2024-12-29 02:54:44,599 - INFO -  * Restarting with watchdog (windowsapi)
+2024-12-29 02:59:59,679 - INFO - Starting model initialization...
+2024-12-29 02:59:59,680 - ERROR - Failed to initialize model with GPU: Model path does not exist: C:\Users\jakub\Desktop\IN-PROGRES\imageGenerator\Llama\MODELS\Phi-3-mini-4k-instruct-fp16.gguf
+2024-12-29 02:59:59,680 - WARNING - Attempting CPU initialization...
+2024-12-29 02:59:59,680 - ERROR - Failed to initialize model on CPU: Model path does not exist: C:\Users\jakub\Desktop\IN-PROGRES\imageGenerator\Llama\MODELS\Phi-3-mini-4k-instruct-fp16.gguf
+2024-12-29 02:59:59,680 - ERROR - Critical error during model initialization: Model path does not exist: C:\Users\jakub\Desktop\IN-PROGRES\imageGenerator\Llama\MODELS\Phi-3-mini-4k-instruct-fp16.gguf
+2024-12-29 03:00:41,029 - INFO - Starting model initialization...
+2024-12-29 03:00:41,799 - INFO - Model initialized successfully with GPU support
+2024-12-29 03:00:41,799 - INFO - Starting Flask server...
+2024-12-29 03:00:41,814 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-29 03:00:41,814 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-29 03:00:41,820 - INFO -  * Restarting with watchdog (windowsapi)
+2024-12-29 03:00:42,032 - INFO - Starting model initialization...
+2024-12-29 03:00:42,794 - INFO - Model initialized successfully with GPU support
+2024-12-29 03:00:42,794 - INFO - Starting Flask server...
+2024-12-29 03:00:42,801 - WARNING -  * Debugger is active!
+2024-12-29 03:00:42,805 - INFO -  * Debugger PIN: 316-601-601
+2024-12-29 03:02:16,807 - INFO - Headers: Host: localhost:5000
+Connection: keep-alive
+Accept: */*
+Access-Control-Request-Method: POST
+Access-Control-Request-Headers: content-type
+Origin: null
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Dest: empty
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: pl-PL,pl;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+2024-12-29 03:02:16,809 - INFO - Body: b''
+2024-12-29 03:02:16,809 - INFO - Response status: 200 OK
+2024-12-29 03:02:16,809 - INFO - Response data: b''
+2024-12-29 03:02:16,810 - INFO - 127.0.0.1 - - [29/Dec/2024 03:02:16] "OPTIONS /generate_prompts HTTP/1.1" 200 -
+2024-12-29 03:02:17,066 - INFO - Headers: Host: localhost:5000
+Connection: keep-alive
+Content-Length: 102
+Sec-Ch-Ua-Platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+Sec-Ch-Ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
+Content-Type: application/json
+Sec-Ch-Ua-Mobile: ?0
+Accept: */*
+Origin: null
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: pl-PL,pl;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+2024-12-29 03:02:17,067 - INFO - Body: b'{"categories":["mountain view","luxury house","beach house","christmas wallpaper","unrealistic cars"]}'
+2024-12-29 03:02:17,067 - INFO - Received new request - ID: 20241229030217067901
+2024-12-29 03:02:17,067 - INFO - Request 20241229030217067901 - Received data: {'categories': ['mountain view', 'luxury house', 'beach house', 'christmas wallpaper', 'unrealistic cars']}
+2024-12-29 03:02:17,067 - INFO - Request 20241229030217067901 - Categories to process: ['mountain view', 'luxury house', 'beach house', 'christmas wallpaper', 'unrealistic cars']
+2024-12-29 03:02:17,067 - INFO - Created prompt: Instruct: Generate 5 creative and diverse prompts for each of the following image generation categories: mountain view, luxury house, beach house, christmas wallpaper, unrealistic cars
+Return the response in valid JSON format like this:
+{
+    "category_name": [
+        "detailed prompt 1",
+        "detailed prompt 2",
+        "detailed prompt 3",
+        "detailed prompt 4",
+        "detailed prompt 5"
+    ]
+}
+
+Keep the output concise and ensure it's valid JSON. Do not include any additional text or explanations.
+
+Response: 
+2024-12-29 03:02:17,067 - INFO - Request 20241229030217067901 - Starting Phi-3 generation
+2024-12-29 03:04:35,080 - INFO - Generation completed in 138.01 seconds
+2024-12-29 03:04:35,081 - INFO - Request 20241229030217067901 - Phi-3 generation completed in 138.01 seconds
+2024-12-29 03:04:35,081 - INFO - Starting JSON output cleaning...
+2024-12-29 03:04:35,082 - INFO - Successfully parsed initial JSON
+2024-12-29 03:04:35,082 - INFO - Adjusted prompts for mountain view: 5 prompts
+2024-12-29 03:04:35,082 - INFO - Adjusted prompts for luxury house: 5 prompts
+2024-12-29 03:04:35,082 - INFO - Adjusted prompts for beach house: 5 prompts
+2024-12-29 03:04:35,082 - INFO - Adjusted prompts for christmas wallpaper: 5 prompts
+2024-12-29 03:04:35,082 - INFO - Adjusted prompts for unrealistic cars: 5 prompts
+2024-12-29 03:04:35,082 - INFO - JSON cleaning completed successfully
+2024-12-29 03:04:35,082 - INFO - Request 20241229030217067901 - Processing completed successfully
+2024-12-29 03:04:35,082 - INFO - Response status: 200 OK
+2024-12-29 03:04:35,082 - INFO - Response data: b'{\n  "beach house": [\n    "A beachfront bungalow overlooking a pristine turquoise lagoon, with palm trees swaying gently in the tropical breeze.",\n    "An artistic coastal villa adorned with colorful seashells and driftwood sculptures, set against an expansive beach backdrop.",\n    "A sun-drenched sandy cove house featuring a private infinity pool extending into the ocean, surrounded by lush tropical gardens.",\n    "A modern beachfront retreat boasting floor-to-ceiling windows and open terraces with views of crystal clear waters and distant islands.",\n    "An ancient stone castle transformed into an enchanting beach home, complete with a secret underwater swimming pool and lighthouse perched on the cliff."\n  ],\n  "christmas wallpaper": [\n    "A festive scene of twinkling lights adorning a snowy landscape, with families gathering around a roaring fireplace in a cozy cabin.",\n    "An enchanting winter wonderland filled with evergreen trees sparkling under the glow of ornaments and candles on a frozen lake.",\n    "A whimsical setting featuring Santa Claus and his reindeer flying over a starlit sky, landing atop snow-covered rooftops in a quaint village.",\n    "An inviting home decorated with a majestic fir tree covered in twinkling lights, surrounded by stockings hung on the mantelpiece.",\n    "A magical forest setting where fairies dance around a giant gingerbread house, bathed in soft moonlight and enchanting winter magic."\n  ],\n  "luxury house": [\n    "An architectural marvel of glass and steel, featuring floor-to-ceiling windows revealing a private infinity pool overlooking the city skyline.",\n    "A palatial mansion with an opulent garden filled with exotic plants, ornate fountains, and a grand entrance leading to lush courtyards.",\n    "An ultra-modern villa set on stunning waterfront property, boasting panoramic views of the ocean and sleek design elements blending nature and technology.",\n    "A historic estate with towering columns, intricate stonework, and a sprawling manicured lawn, exuding timeless elegance and charm.",\n    "An eco-friendly retreat nestled in an oak forest, featuring solar panels, rainwater harvesting systems, and sustainable materials harmonizing luxury with nature."\n  ],\n  "mountain view": [\n    "A panoramic image of a snow-capped mountain range with vibrant wildflowers dotting the slopes, sunlight casting golden hues over the peaks.",\n    "An aerial shot of an ancient forest nestled between towering mountains, where rays of morning light pierce through the canopy.",\n    "A serene landscape featuring a crystal-clear alpine lake surrounded by jagged cliffs and snow-dusted pine trees under a pastel sky.",\n    "An evening scene with majestic mountain peaks silhouetted against a fiery sunset, creating dramatic shadows over the rugged terrain.",\n    "A winter wonderland image showing a pristine white landscape with icicles hanging from cliffs and a lone eagle soaring above."\n  ],\n  "unrealistic cars": [\n    "A flying car with sleek wings soaring through the sky amidst floating islands and neon-lit futuristic cities.",\n    "An aquatic vehicle gliding over water surfaces, powered by advanced energy systems and equipped with a transparent hull to view marine life below.",\n    "A levitating sports car hovering effortlessly above the ground, its metallic body glistening under an array of colorful lights in a dystopian metropolis.",\n    "An ice-covered vehicle designed for polar expeditions, featuring reinforced walls and icy propellers enabling navigation across frozen landscapes.",\n    "A steampunk-inspired car with brass accents, clockwork mechanisms, and steam-powered engines, navigating cobblestone streets in a vibrant Victorian city."\n  ]\n}\n'
+2024-12-29 03:04:35,082 - INFO - 127.0.0.1 - - [29/Dec/2024 03:04:35] "POST /generate_prompts HTTP/1.1" 200 -

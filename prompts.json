@@ -1,0 +1,86 @@
+{
+  "OFFICE_ENVIRONMENT": [
+    "Modern minimalist office space with floor-to-ceiling windows, natural light streaming in, clean white desks, and ergonomic chairs",
+    "Cozy home office setup with wooden desk, vintage lamp, and a wall of bookshelves filled with books and plants",
+    "Corporate meeting room with glass walls, modern conference table, and city skyline view at sunset",
+    "Collaborative workspace with colorful bean bags, whiteboard walls covered in creative diagrams, and communal tables",
+    "Industrial-style office loft with exposed brick walls, hanging plants, and contemporary office furniture",
+    "Tech startup office with neon signs, gaming area, and open-plan workspace filled with developers",
+    "Executive office with leather chair, mahogany desk, abstract art on walls, and panoramic city views",
+    "Contemporary office kitchen area with coffee bar, high stools, and employees having casual meetings",
+    "Quiet focus room with sound-absorbing walls, minimal decoration, and peaceful atmosphere",
+    "Office lobby with reception desk, living wall of plants, and modern architectural details"
+  ],
+  "ABSTRACT_COLORS": [
+    "Liquid swirls of neon pink and electric blue creating a cosmic nebula effect",
+    "Geometric patterns of yellow and purple fractals expanding infinitely",
+    "Explosion of vibrant rainbow colors in smoke form against black background",
+    "Flowing ribbons of metallic gold and silver intertwining in abstract patterns",
+    "Watercolor splashes of teal and coral creating organic shapes",
+    "Digital glitch art with pixelated streams of red, green, and blue",
+    "Abstract minimalist composition with perfect circles in pastel colors",
+    "Chaotic splatter of primary colors creating Jackson Pollock style artwork",
+    "Gradient mesh of sunset colors morphing into deep ocean blues",
+    "Kaleidoscopic pattern of jewel tones forming symmetrical mandalas"
+  ],
+  "LANDSCAPES": [
+    "Majestic mountain range at sunrise with snow-capped peaks and misty valleys",
+    "Rolling hills of lavender fields stretching to the horizon in Provence",
+    "Desert sand dunes under starlit sky with single ancient tree",
+    "Dramatic cliff coastline with crashing waves and lighthouse at dusk",
+    "Autumn forest with golden leaves falling and sunlight streaming through trees",
+    "Rice terraces in morning fog with traditional Asian countryside houses",
+    "Northern lights dancing over frozen lake surrounded by pine forest",
+    "Canyon walls with layered red rocks and winding river below",
+    "Scottish highlands with ancient castle ruins and stormy skies",
+    "Cherry blossom garden with traditional Japanese pagoda and mountain backdrop"
+  ],
+  "EXTREME_SPORTS": [
+    "Wingsuit flyer soaring through mountain valley with GoPro perspective",
+    "Snowboarder catching big air off backcountry cliff with powder spray",
+    "Rock climber scaling overhang on seaside cliff without ropes",
+    "Motocross rider performing backflip over canyon gap at sunset",
+    "Surfer riding inside massive barrel wave with perfect form",
+    "Base jumper leaping off skyscraper with city lights below",
+    "Mountain biker hitting technical downhill trail through forest",
+    "Ice climber ascending frozen waterfall with ice axes",
+    "Skateboader grinding handrail in urban environment at night",
+    "Parkour athlete jumping between rooftops in dramatic perspective"
+  ],
+  "OCEANSIDE_VIEWS": [
+    "Luxury beach resort with infinity pool merging with ocean horizon",
+    "Tropical beach at sunset with palm trees and hammock between them",
+    "Crystal clear turquoise water with coral reefs visible from above",
+    "Wooden pier extending into calm ocean with mountains in background",
+    "Dramatic cliffside restaurant terrace overlooking Mediterranean Sea",
+    "Private beach cove with white sand and yacht anchored offshore",
+    "Beachfront villa with floor-to-ceiling windows and oceanfront pool",
+    "Surfers waiting for waves at dawn with colorful sky reflection",
+    "Traditional fishing boats in harbor with whitewashed village backdrop",
+    "Storm approaching over ocean with dramatic clouds and rough waves"
+  ],
+  "TROPICAL_JUNGLE": [
+    "Dense rainforest canopy with sunbeams breaking through leaves",
+    "Ancient temple ruins being reclaimed by jungle vegetation",
+    "Tropical waterfall cascading into crystal clear pool surrounded by ferns",
+    "Colorful macaws and toucans perched in flowering jungle trees",
+    "Misty morning in bamboo forest with ray of sunlight",
+    "River winding through jungle with traditional longboat",
+    "Treehouse resort built into massive jungle trees with rope bridges",
+    "Jaguar prowling through lush jungle undergrowth",
+    "Exotic flowers blooming in jungle clearing with butterflies",
+    "Night scene in jungle with bioluminescent plants and insects"
+  ],
+  "FUTURE_CARS": [
+    "Sleek electric hypercar with holographic displays and gull-wing doors",
+    "Flying car navigating between futuristic skyscrapers at sunset",
+    "Self-driving luxury pod with transparent roof and lounge interior",
+    "Hydrogen-powered supercar with active aerodynamic elements",
+    "Autonomous vehicle with modular body that transforms for different uses",
+    "Electric sports car charging at solar-powered station in desert",
+    "Concept car with biometric security and augmented reality windshield",
+    "Zero-gravity vehicle hovering over magnetic road through cyber city",
+    "Shape-shifting car morphing from sports mode to family vehicle",
+    "Solar-powered car with transparent photovoltaic body panels"
+  ]
+}

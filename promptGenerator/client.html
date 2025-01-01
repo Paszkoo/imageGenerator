@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+
+        .results {
+            margin-top: 20px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: none;
+        }
+
+        .loading {
+            display: none;
+            margin: 20px 0;
+            text-align: center;
+            color: #666;
+        }
+
+        .error {
+            color: red;
+            margin-top: 10px;
+            display: none;
+        }
+
+        .category-results {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f8f8f8;
+            border-radius: 4px;
+        }
+
+        .category-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .prompt-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .prompt-item {
+            margin-bottom: 5px;
+            padding: 5px;
+            border-left: 3px solid #4CAF50;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Generator Promptów</h1>
+        
+        <form id="promptForm">
+            <div class="input-group">
+                <label for="category1">Kategoria 1:</label>
+                <input type="text" id="category1" required placeholder="np. lake view">
+            </div>
+            
+            <div class="input-group">
+                <label for="category2">Kategoria 2:</label>
+                <input type="text" id="category2" required placeholder="np. cyberpunk city">
+            </div>
+            
+            <div class="input-group">
+                <label for="category3">Kategoria 3:</label>
+                <input type="text" id="category3" required placeholder="np. food on plate">
+            </div>
+            
+            <div class="input-group">
+                <label for="category4">Kategoria 4:</label>
+                <input type="text" id="category4" required placeholder="np. image for background">
+            </div>
+            
+            <div class="input-group">
+                <label for="category5">Kategoria 5:</label>
+                <input type="text" id="category5" required placeholder="np. real bird photos">
+            </div>
+            
+            <button type="submit" id="submitBtn">Generuj Prompty</button>
+        </form>
+        
+        <div class="loading" id="loading">
+            Generowanie promptów... (może potrwać do 2 minut)
+        </div>
+        
+        <div class="error" id="error"></div>
+    </div>
+
+    <div class="results" id="results"></div>
+
+    <script>
+        const form = document.getElementById('promptForm');
+        const loading = document.getElementById('loading');
+        const results = document.getElementById('results');
+        const error = document.getElementById('error');
+        const submitBtn = document.getElementById('submitBtn');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // Zbierz kategorie
+            const categories = [];
+            for (let i = 1; i <= 5; i++) {
+                const value = document.getElementById(`category${i}`).value.trim();
+                if (value) categories.push(value);
+            }
+
+            // Pokaż ładowanie
+            loading.style.display = 'block';
+            results.style.display = 'none';
+            error.style.display = 'none';
+            submitBtn.disabled = true;
+
+            try {
+                const response = await fetch('http://localhost:5000/generate_prompts', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ categories })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                
+                // Wyświetl wyniki
+                results.innerHTML = '';
+                for (const [category, prompts] of Object.entries(data)) {
+                    const categoryDiv = document.createElement('div');
+                    categoryDiv.className = 'category-results';
+                    
+                    const titleDiv = document.createElement('div');
+                    titleDiv.className = 'category-title';
+                    titleDiv.textContent = category;
+                    
+                    const promptList = document.createElement('ul');
+                    promptList.className = 'prompt-list';
+                    
+                    prompts.forEach(prompt => {
+                        const li = document.createElement('li');
+                        li.className = 'prompt-item';
+                        li.textContent = prompt;
+                        promptList.appendChild(li);
+                    });
+                    
+                    categoryDiv.appendChild(titleDiv);
+                    categoryDiv.appendChild(promptList);
+                    results.appendChild(categoryDiv);
+                }
+                
+                results.style.display = 'block';
+            } catch (err) {
+                error.textContent = 'Wystąpił błąd podczas generowania promptów. Spróbuj ponownie.';
+                error.style.display = 'block';
+                console.error('Error:', err);
+            } finally {
+                loading.style.display = 'none';
+                submitBtn.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>
